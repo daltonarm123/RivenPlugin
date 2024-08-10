@@ -22,7 +22,7 @@ PLUGIN_API bool on_sdk_load(plugin_sdk_core* plugin_sdk_good)
     switch (myhero->get_champion())
     {
     case champion_id::Riven:
-        // Load garen script
+        // Load riven script
         //
         riven::load();
         break;
@@ -45,7 +45,7 @@ PLUGIN_API void on_sdk_unload()
     switch (myhero->get_champion())
     {
     case champion_id::Riven:
-        // Unload garen script
+        // Unload riven script
         //
         riven::unload();
         break;
