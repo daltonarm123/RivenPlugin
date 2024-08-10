@@ -28,7 +28,7 @@ namespace riven
     void on_draw();
     void on_process_spell_cast(game_object_script sender, spell_instance_script spell);
 
-    // Helper function to calculate Riven's current damage (adapted from Amumu.cpp)
+    // Helper function to calculate Riven's current damage 
     float calculate_current_damage(game_object_script target)
     {
         float base_damage = myhero->get_total_attack_damage(); // Get Riven's base damage
@@ -64,7 +64,7 @@ namespace riven
     {
         console->print("Riven script loaded.");
 
-        // Initialize the main menu tab (adapted from Amumu.cpp)
+        // Initialize the main menu tab 
         main_tab = menu->create_tab("riven_plugin", "Riven Plugin");
 
         // Mode Hotkeys (with user-defined keybindings)
@@ -103,7 +103,7 @@ namespace riven
         // Setting R as a skillshot
         r->set_skillshot(0.25f, 200.0f, 1200.0f, { collisionable_objects::heroes, collisionable_objects::minions }, skillshot_type::skillshot_cone);
 
-        // Register events (adapted from Amumu.cpp)
+        // Register events 
         event_handler<events::on_update>::add_callback(on_update);
         event_handler<events::on_draw>::add_callback(on_draw); // Drawing logic from Permashow.cpp
         event_handler<events::on_process_spell_cast>::add_callback(on_process_spell_cast);
@@ -134,7 +134,7 @@ namespace riven
 
     void on_update()
     {
-        // Your update logic here, integrating prediction from Helpers.cpp
+        // Your update logic here, integrating prediction
         if (combo_hotkey->get_bool())
         {
             for (auto& enemy : entitylist->get_enemy_heroes())
