@@ -1,8 +1,9 @@
 #pragma once
 
 #include "../plugin_sdk/plugin_sdk.hpp"
-#include "RivenDraw.hpp"
-
+#include "RivenDraw.hpp" // drawing functions
+#include "RivenHelpers.hpp" // helper functions
+#include "RivenVisuals.hpp"
 namespace riven
 {
     TreeTab* main_tab = nullptr;
